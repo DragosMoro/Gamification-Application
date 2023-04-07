@@ -1,0 +1,28 @@
+.text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2px;
+    -fx-text-fill: white;
+    -fx-font: 16px "Arial Rounded MT Bold";
+    -fx-border-radius: 5;
+}
+.text-field:focused{
+    -fx-border-color:#483df0;
+}
+.button {
+    -fx-background-color: #483df0; /* Culoare violet modernă */
+    -fx-background-radius: 15;
+    -fx-border-color: transparent;
+    -fx-border-radius: 15;
+    -fx-padding: 8 16 8 16;
+}
+
+.button:hover {
+    -fx-background-color: white;
+    -fx-text-fill: #483df0; /* Culoare violet modernă */
+}
+
+.button:focused{
+    -fx-background-color: white;
+    -fx-text-fill: #483df0; /* Culoare violet modernă */
+}
