@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: #1E1E1E;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.accesa_application.controllers.CreateQuestController">
+   <children>
+      <AnchorPane layoutX="39.0" layoutY="50.0" prefHeight="643.0" prefWidth="1123.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
+         <children>
+            <TextArea fx:id="descriptionTextArea" layoutX="256.0" layoutY="266.0" prefHeight="261.0" prefWidth="613.0" styleClass="text-area" stylesheets="@../../../styles/styles.css" />
+            <TextField fx:id="titleTextField" layoutX="254.0" layoutY="99.0" prefHeight="34.0" prefWidth="613.0" />
+            <TextField fx:id="rewardInPointsTextField" layoutX="254.0" layoutY="181.0" prefHeight="34.0" prefWidth="613.0" />
+            <Label layoutX="418.0" layoutY="14.0" text="Create A Quest" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="36.0" />
+               </font>
+            </Label>
+            <Button layoutX="428.0" layoutY="581.0" mnemonicParsing="false" onAction="#onAddQuestButtonAction" prefHeight="38.0" prefWidth="268.0" styleClass="button2" stylesheets="@../../../styles/styles.css" text="Add quest" />
+            <Label layoutX="255.0" layoutY="74.0" text="Title" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="254.0" layoutY="155.0" text="Reward in points" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="256.0" layoutY="237.0" text="Add a description" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="252.0" layoutY="540.0" prefHeight="27.0" prefWidth="620.0" textAlignment="CENTER" textFill="#ae0000">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

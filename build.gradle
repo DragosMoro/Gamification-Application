@@ -25,7 +25,7 @@ tasks.withType(JavaCompile) {
 
 application {
     mainModule = 'com.example.accesa_application'
-    mainClass = 'com.example.accesa_application.HelloApplication'
+    mainClass = 'com.example.accesa_application.MainGUI'
 }
 
 javafx {
@@ -49,6 +49,10 @@ dependencies {
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    implementation group: 'com.google.guava', name: 'guava', version: '31.0.1-jre'
+
+    runtimeOnly group: 'org.xerial', name: 'sqlite-jdbc', version: '3.36.0.3'
+
 }
 
 test {

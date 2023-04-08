@@ -9,10 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.accesa_application.Login">
+<AnchorPane prefHeight="718.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.accesa_application.controllers.LoginController">
    <children>
-      <ImageView fitHeight="752.0" fitWidth="1202.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="720.0" fitWidth="1202.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/Screenshot%202023-04-05%20211045.png" />
          </image>
@@ -22,65 +21,104 @@
             <Image url="@../../../images/Picture1.png" />
          </image>
       </ImageView>
-      <Label alignment="TOP_CENTER" layoutX="81.0" layoutY="230.0" prefHeight="99.0" prefWidth="322.0" text="Sign in to &#10;start the challange" textFill="WHITE">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="35.0" />
-         </font>
-      </Label>
-      <Label layoutX="81.0" layoutY="383.0" prefHeight="34.0" prefWidth="322.0" text="If you don't have an account," textFill="WHITE">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="22.0" />
-         </font>
-      </Label>
-      <Label layoutX="81.0" layoutY="413.0" prefHeight="27.0" prefWidth="163.0" text="register here!" textFill="#483df0">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="22.0" />
-         </font>
-      </Label>
-      <AnchorPane layoutX="756.0" layoutY="50.0" prefHeight="657.0" prefWidth="443.0" style="-fx-opacity: 0;">
+      <AnchorPane fx:id="logInAnchorPane" layoutX="761.0" layoutY="80.0" prefHeight="555.0" prefWidth="438.0" style="-fx-opacity: 1;">
          <children>
-            <Label layoutX="115.0" layoutY="265.0" text="Password" textFill="WHITE">
+            <Label layoutX="102.0" layoutY="117.0" text="Email" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="115.0" layoutY="165.0" prefHeight="45.0" prefWidth="230.0" stylesheets="@../../../styles/styles.css" />
-            <PasswordField layoutX="115.0" layoutY="425.0" prefHeight="45.0" prefWidth="230.0" stylesheets="@../../../styles/styles.css" />
-            <Button layoutX="115.0" layoutY="552.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="230.0" stylesheets="@../../../styles/styles.css" text="Register" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="18.0" />
-               </font>
-            </Button>
-            <Label layoutX="115.0" layoutY="395.0" text="Repeat Password" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="14.0" />
-               </font>
-            </Label>
-            <Label layoutX="115.0" layoutY="135.0" text="Email" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="14.0" />
-               </font>
-            </Label>
-            <PasswordField layoutX="115.0" layoutY="295.0" prefHeight="45.0" prefWidth="230.0" stylesheets="@../../../styles/styles.css" />
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="761.0" layoutY="80.0" prefHeight="555.0" prefWidth="438.0">
-         <children>
-            <TextField layoutX="102.0" layoutY="144.0" prefHeight="45.0" prefWidth="230.0" stylesheets="@../../../styles/styles.css" />
-            <PasswordField layoutX="102.0" layoutY="253.0" prefHeight="45.0" prefWidth="230.0" stylesheets="@../../../styles/styles.css" />
-            <Button layoutX="102.0" layoutY="379.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="230.0" stylesheets="@../../../styles/styles.css" text="Login" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="18.0" />
-               </font>
-            </Button>
+            <TextField fx:id="emailLoginTextField" layoutX="102.0" layoutY="144.0" prefHeight="45.0" prefWidth="230.0" stylesheets="@../../../styles/styles.css" />
             <Label layoutX="102.0" layoutY="227.0" text="Password" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="102.0" layoutY="117.0" text="Email" textFill="WHITE">
+            <PasswordField fx:id="passwordLoginTextField" layoutX="102.0" layoutY="253.0" prefHeight="45.0" prefWidth="230.0" stylesheets="@../../../styles/styles.css" />
+            <Button fx:id="logInButton" layoutX="102.0" layoutY="395.0" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="45.0" prefWidth="230.0" stylesheets="@../../../styles/styles.css" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="337.0" prefHeight="17.0" prefWidth="403.0" textFill="#f50606">
                <font>
                   <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="registerAnchorPane" layoutX="756.0" layoutY="50.0" prefHeight="657.0" prefWidth="443.0" style="-fx-opacity: 1;">
+         <children>
+            <Label layoutX="107.0" layoutY="74.0" text="Username" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameRegisterTextField" layoutX="107.0" layoutY="104.0" prefHeight="45.0" prefWidth="230.0" stylesheets="@../../../styles/styles.css" />
+            <Label layoutX="107.0" layoutY="174.0" text="Email" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailRegisterTextField" layoutX="107.0" layoutY="204.0" prefHeight="45.0" prefWidth="230.0" stylesheets="@../../../styles/styles.css" />
+            <Label layoutX="107.0" layoutY="274.0" text="Password" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordRegisterTextField" layoutX="107.0" layoutY="304.0" prefHeight="45.0" prefWidth="230.0" stylesheets="@../../../styles/styles.css" />
+            <Label layoutX="107.0" layoutY="374.0" text="Repeat Password" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="repeatPasswordRegisterTextField" layoutX="107.0" layoutY="404.0" prefHeight="45.0" prefWidth="230.0" stylesheets="@../../../styles/styles.css" />
+            <Button fx:id="registerButton" layoutX="112.0" layoutY="512.0" mnemonicParsing="false" onAction="#onRegisterButtonClick" prefHeight="45.0" prefWidth="230.0" stylesheets="@../../../styles/styles.css" text="Register" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="errorRegisterLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0" layoutY="467.0" prefHeight="17.0" prefWidth="372.0" textFill="#f50606">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="loginInfoAnchorPane" layoutX="-2.0" prefHeight="710.0" prefWidth="420.0">
+         <children>
+            <Label alignment="TOP_CENTER" layoutX="49.0" layoutY="261.0" prefHeight="99.0" prefWidth="322.0" text="Sign in to &#10;start the challange" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="49.0" layoutY="389.0" prefHeight="34.0" prefWidth="322.0" text="If you don't have an account," textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="registerHereLabel" layoutX="49.0" layoutY="423.0" onMouseClicked="#onRegisterLabelClick" prefHeight="27.0" prefWidth="163.0" style="-fx-cursor: hand;" text="register here!" textFill="#483df0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="registerInfoAnchorPane" layoutX="8.0" layoutY="10.0" prefHeight="703.0" prefWidth="420.0">
+         <children>
+            <Label alignment="TOP_CENTER" layoutX="42.0" layoutY="261.0" prefHeight="99.0" prefWidth="322.0" text="Register to &#10;start the challange" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="389.0" prefHeight="34.0" prefWidth="336.0" text="If you already have an account," textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="loginHereLabel" layoutX="42.0" layoutY="423.0" onMouseClicked="#onLoginLabelClick" prefHeight="27.0" prefWidth="163.0" style="-fx-cursor: hand;" text="login here!" textFill="#483df0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="22.0" />
                </font>
             </Label>
          </children>
