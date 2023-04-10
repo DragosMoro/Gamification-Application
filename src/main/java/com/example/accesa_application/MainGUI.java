@@ -25,10 +25,14 @@ public class MainGUI extends Application {
         IUserRepository<Integer> userRepository = new UserRepository(props);
         IQuestRepository<Integer> questRepository = new QuestRepository(props);
         IResponseRepository<Integer> responseRepository = new ResponseRepository(props);
+        IRewardRepository<Integer> rewardRepository = new RewardRepository(props);
+        IItemRepository<Integer> itemRepository = new ItemRepository(props);
         IUserService<Integer> userService = new UserService(props, userRepository);
         IQuestService<Integer> questService = new QuestService(props, questRepository);
         IResponseService<Integer> responseService = new ResponseService(props, responseRepository);
-        Service service = new Service(props, userService, questService, responseService);
+        IRewardService<Integer> rewardService = new RewardService(props, rewardRepository);
+        IItemService<Integer> itemService = new ItemService(props, itemRepository);
+        Service service = new Service(props, userService, questService, responseService, rewardService, itemService);
         FXMLLoader fxmlLoader = new FXMLLoader(MainGUI.class.getResource("login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1200, 718);
         LoginController loginController = fxmlLoader.getController();

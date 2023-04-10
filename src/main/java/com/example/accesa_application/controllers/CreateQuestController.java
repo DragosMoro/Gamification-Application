@@ -1,13 +1,17 @@
 package com.example.accesa_application.controllers;
 
+import com.example.accesa_application.MainGUI;
 import com.example.accesa_application.domain.Quest;
 import com.example.accesa_application.domain.User;
 import com.example.accesa_application.service.Service;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class CreateQuestController {
     @FXML
@@ -21,6 +25,8 @@ public class CreateQuestController {
 
     @FXML
     public Label errorLabel;
+    @FXML
+    public Label backLabel;
 
    private Service service;
     private User<Integer> user;
@@ -41,10 +47,12 @@ public class CreateQuestController {
         try {
             int reward = Integer.parseInt(rewardInPoints);
             if (reward < 0) {
+                errorLabel.setTextFill(javafx.scene.paint.Color.RED);
                 errorLabel.setText("Reward must be a positive number!");
                 return;
             }
             if(reward > user.getPoints()){
+                errorLabel.setTextFill(javafx.scene.paint.Color.RED);
                 errorLabel.setText("You don't have enough points!");
                 return;
             }
@@ -57,5 +65,27 @@ public class CreateQuestController {
         } catch (NumberFormatException e) {
             errorLabel.setText("Reward must be a number!");
         }
+    }
+
+    @FXML
+    public void onBackButtonClickAction() {
+        Scene scene;
+        FXMLLoader loader = new FXMLLoader(MainGUI.class.getResource("main_menu.fxml"));
+        try {
+            scene = new Scene(loader.load(), 1200, 718);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return;
+        }
+        MainMenuController mainMenuController = loader.getController();
+        mainMenuController.initialize(service, user);
+        mainMenuController.questsPageView();
+        Stage currentStage = (Stage) backLabel.getScene().getWindow();
+        Stage newStage = new Stage();
+        newStage.setScene(scene);
+        newStage.setResizable(false);
+        newStage.setTitle("Accesa Application");
+        currentStage.close();
+        newStage.show();
     }
 }

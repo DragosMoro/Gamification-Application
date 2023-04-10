@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: #1E1E1E;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.accesa_application.controllers.SolveQuestController">
+   <children>
+      <AnchorPane layoutX="15.0" layoutY="13.0" prefHeight="696.0" prefWidth="1173.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
+         <children>
+            <Label layoutX="418.0" layoutY="14.0" text="Solve the Quest" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="36.0" />
+               </font>
+            </Label>
+            <Button layoutX="621.0" layoutY="635.0" mnemonicParsing="false" onAction="#onAddAnswerButtonAction" prefHeight="38.0" prefWidth="514.0" styleClass="button2" stylesheets="@../../../styles/styles.css" text="Add answer" />
+            <AnchorPane layoutX="621.0" layoutY="88.0" prefHeight="485.0" prefWidth="514.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
+               <children>
+                  <TextArea fx:id="answerTextArea" layoutX="31.0" layoutY="104.0" prefHeight="348.0" prefWidth="453.0" styleClass="scroll-bar" stylesheets="@../../../styles/styles.css" />
+                  <Label layoutX="145.0" layoutY="22.0" text="Your Answer" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="87.0" prefHeight="592.0" prefWidth="542.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
+               <children>
+                  <Label layoutX="145.0" layoutY="20.0" text="Quest Details" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="85.0" text="Title:" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="135.0" text="Description:" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="titleLabel" layoutX="82.0" layoutY="85.0" prefHeight="23.0" prefWidth="419.0" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="523.0" text="Points:" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pointsLabel" layoutX="96.0" layoutY="523.0" prefHeight="23.0" prefWidth="419.0" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="descriptionTextArea" editable="false" layoutX="22.0" layoutY="172.0" prefHeight="322.0" prefWidth="492.0" styleClass="scroll-bar" stylesheets="@../../../styles/styles.css" />
+               </children>
+            </AnchorPane>
+            <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="621.0" layoutY="597.0" prefHeight="17.0" prefWidth="514.0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="backLabel" layoutX="46.0" layoutY="18.0" onMouseClicked="#onBackLabelClickAction" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/15.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -156,9 +156,7 @@
 .tab:selected{
     -fx-background-color: black;
 }
-.scroll-bar{
-    -fx-opacity: 0;
-}
+
 .text-area{
     -fx-text-fill: #ffffff;
     -fx-font: 16px "Arial Rounded MT Bold";
@@ -169,6 +167,37 @@
     -fx-border-color: #ffffff;
     -fx-border-width: 2px;
 }
+
+.scroll-bar {
+    -fx-base: white;
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-background-insets: 0, 0, 1;
+    -fx-background-radius: 10;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-shape: " ";
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-min-width: 10;
+}
+
+.scroll-bar:horizontal .thumb {
+    -fx-min-height: 10;
+}
+
 
 
 

@@ -14,338 +14,6 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: #1E1E1E;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.accesa_application.controllers.MainMenuController">
    <children>
-      <AnchorPane layoutX="-20.0" prefHeight="723.0" prefWidth="305.0" style="-fx-background-color: #483df0; -fx-background-radius: 20;">
-         <effect>
-            <DropShadow height="0.0" radius="31.707500000000003" width="128.83" />
-         </effect>
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="84.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/fotor_2023-4-7_14_54_42.png" />
-               </image>
-               <effect>
-                  <DropShadow />
-               </effect>
-            </ImageView>
-            <Label layoutX="128.0" layoutY="187.0" text="Hello" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="24.0" />
-               </font>
-            </Label>
-            <Label fx:id="usernameLabel" layoutX="127.0" layoutY="212.0" text="Label" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="24.0" />
-               </font>
-            </Label>
-            <Button layoutX="92.0" layoutY="377.0" mnemonicParsing="false" onAction="#onQuestsButtonClick" prefHeight="38.0" prefWidth="98.0" style="-fx-background-color: transparent;" text="Quests" textFill="WHITE">
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/perspective_matte-162-128x128.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="14.0" />
-               </font>
-            </Button>
-            <Button layoutX="92.0" layoutY="447.0" mnemonicParsing="false" onAction="#onBadgesButtonClick" prefHeight="35.0" prefWidth="106.0" style="-fx-background-color: transparent;" text="Badges" textFill="WHITE">
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/perspective_matte-162-128x128.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="14.0" />
-               </font>
-            </Button>
-            <Label fx:id="pointsLabel" layoutX="136.0" layoutY="252.0" prefHeight="18.0" prefWidth="48.0" style="-fx-background-color: #3f37ce; -fx-background-radius: 5px;" text="124" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="13.0" />
-               </font>
-               <effect>
-                  <DropShadow height="5.0" radius="2.0" width="5.0">
-                     <color>
-                        <Color red="0.1541108340024948" green="0.15171174705028534" blue="0.22368420660495758" />
-                     </color>
-                  </DropShadow>
-               </effect>
-               <graphic>
-                  <ImageView fitHeight="19.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/perspective_matte-162-128x128.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <Button layoutX="92.0" layoutY="517.0" mnemonicParsing="false" onAction="#onLeaderboardButtonClick" prefHeight="35.0" prefWidth="137.0" style="-fx-background-color: transparent;" text="Leaderboard" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="14.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/perspective_matte-162-128x128.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button layoutX="92.0" layoutY="307.0" mnemonicParsing="false" onAction="#onOverviewButtonClick" prefHeight="38.0" prefWidth="120.0" style="-fx-background-color: transparent;" text="Overview" textFill="WHITE">
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/perspective_matte-162-128x128.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="14.0" />
-               </font>
-            </Button>
-            <Button layoutX="92.0" layoutY="587.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: transparent;" text="Shop" textFill="WHITE">
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/perspective_matte-162-128x128.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="14.0" />
-               </font>
-            </Button>
-            <Button layoutX="92.0" layoutY="657.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="98.0" style="-fx-background-color: transparent;" text="Logout" textFill="WHITE">
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/perspective_matte-162-128x128.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="14.0" />
-               </font>
-            </Button>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="overviewAnchorPane" layoutX="292.0" layoutY="9.0" prefHeight="714.0" prefWidth="908.0" style="-fx-opacity: 0;">
-         <children>
-            <AnchorPane layoutX="14.0" layoutY="448.0" prefHeight="215.0" prefWidth="263.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
-               <effect>
-                  <DropShadow height="10.0" radius="4.5" width="10.0" />
-               </effect>
-               <children>
-                  <Label layoutX="48.0" layoutY="8.0" text="Quests Solved" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="24.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="solvedQuestsLabel" layoutX="82.0" layoutY="89.0" text="5" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="48.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="56.0" fitWidth="65.0" layoutX="116.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true" />
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="297.0" layoutY="448.0" prefHeight="215.0" prefWidth="263.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
-               <effect>
-                  <DropShadow height="10.0" radius="4.5" width="10.0" />
-               </effect>
-               <children>
-                  <ListView layoutY="48.0" prefHeight="167.0" prefWidth="263.0" />
-                  <Label layoutX="69.0" layoutY="8.0" text="Your Items" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="24.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="583.0" layoutY="29.0" prefHeight="638.0" prefWidth="319.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
-               <children>
-                  <ListView fx:id="responsesListView" layoutX="13.0" layoutY="61.0" prefHeight="478.0" prefWidth="293.0" stylesheets="@../../../styles/styles.css">
-                     <effect>
-                        <DropShadow height="10.0" radius="4.5" width="10.0" />
-                     </effect>
-                  </ListView>
-                  <Button fx:id="markAsBestResponseButton" layoutX="18.0" layoutY="575.0" mnemonicParsing="false" onAction="#onMarkAsBestResponseButtonAction" prefHeight="25.0" prefWidth="293.0" styleClass="button2" stylesheets="@../../../styles/styles.css" text="Mark as the best response" />
-                  <Label layoutX="100.0" layoutY="7.0" text="Responses" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="24.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="13.0" layoutY="28.0" prefHeight="399.0" prefWidth="547.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
-               <children>
-                  <TableView fx:id="userQuestsTableView" layoutX="19.0" layoutY="54.0" prefHeight="255.0" prefWidth="509.0" stylesheets="@../../../styles/styles.css">
-                    <columns>
-                      <TableColumn fx:id="questTitleColumn" prefWidth="327.0" text="Quest Title" />
-                      <TableColumn fx:id="pointsColumn" prefWidth="181.0" text="Points" />
-                    </columns>
-                     <effect>
-                        <DropShadow height="10.0" radius="4.5" width="10.0" />
-                     </effect>
-                  </TableView>
-                  <Button layoutX="32.0" layoutY="332.0" mnemonicParsing="false" onAction="#onShowAnswersButtonAction" prefHeight="25.0" prefWidth="483.0" styleClass="button2" stylesheets="@../../../styles/styles.css" text="Show answers">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="16.0" />
-                     </font>
-                     <effect>
-                        <DropShadow height="10.0" radius="4.5" width="10.0" />
-                     </effect>
-                  </Button>
-                  <Label layoutX="202.0" layoutY="7.0" text="Your Quests" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="24.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="badgesAnchorPane" layoutX="284.0" prefHeight="723.0" prefWidth="916.0" style="-fx-opacity: 0;">
-         <children>
-            <Label layoutX="391.0" layoutY="38.0" text="Badges" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="36.0" />
-               </font>
-            </Label>
-            <AnchorPane layoutX="80.0" layoutY="170.0" prefHeight="200.0" prefWidth="156.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
-               <children>
-                  <ImageView fitHeight="129.0" fitWidth="134.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/badge1.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="28.0" layoutY="142.0" text="First Quest &#10;Solved" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="280.0" layoutY="170.0" prefHeight="200.0" prefWidth="156.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
-               <children>
-                  <ImageView fitHeight="129.0" fitWidth="134.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/badge2.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="28.0" layoutY="142.0" text="10 Quests &#10;Solved" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="680.0" layoutY="170.0" prefHeight="200.0" prefWidth="156.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
-               <children>
-                  <ImageView fitHeight="129.0" fitWidth="134.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/badge4.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="28.0" layoutY="142.0" text="100 Quests &#10;Solved" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="480.0" layoutY="170.0" prefHeight="200.0" prefWidth="156.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
-               <children>
-                  <ImageView fitHeight="129.0" fitWidth="134.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/badge3.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="32.0" layoutY="136.0" text="50 Quests &#10;Solved" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="80.0" layoutY="448.0" prefHeight="200.0" prefWidth="156.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
-               <children>
-                  <ImageView fitHeight="129.0" fitWidth="134.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/badge5.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="28.0" layoutY="142.0" text="First Quest &#10;Posted" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="280.0" layoutY="448.0" prefHeight="200.0" prefWidth="156.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
-               <children>
-                  <ImageView fitHeight="129.0" fitWidth="134.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/badge6.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="28.0" layoutY="142.0" text="10 Quests &#10;Posted" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="680.0" layoutY="448.0" prefHeight="200.0" prefWidth="156.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
-               <children>
-                  <ImageView fitHeight="129.0" fitWidth="134.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/badge8.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="28.0" layoutY="142.0" text="100 Quests &#10;Posted" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="480.0" layoutY="448.0" prefHeight="200.0" prefWidth="156.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
-               <children>
-                  <ImageView fitHeight="129.0" fitWidth="134.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../images/badge7.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="32.0" layoutY="136.0" text="50 Quests &#10;Posted" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="leaderboardAnchorPane" layoutX="284.0" prefHeight="723.0" prefWidth="941.0" style="-fx-opacity: 0;">
-         <children>
-            <AnchorPane layoutX="101.0" layoutY="86.0" prefHeight="534.0" prefWidth="739.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
-               <children>
-                  <TableView layoutX="51.0" layoutY="136.0" prefHeight="347.0" prefWidth="638.0">
-                    <columns>
-                      <TableColumn prefWidth="379.0" text="Username" />
-                      <TableColumn prefWidth="258.0" text="Quests Completed" />
-                    </columns>
-                  </TableView>
-                  <Label layoutX="256.0" layoutY="28.0" text="Leaderboard" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="36.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
       <AnchorPane fx:id="questsAnchorPane" layoutX="292.0" prefHeight="723.0" prefWidth="908.0" style="-fx-opacity: 1;">
          <children>
             <AnchorPane layoutX="42.0" layoutY="46.0" prefHeight="435.0" prefWidth="799.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
@@ -377,7 +45,7 @@
                      </font>
                   </Label>
                   <ImageView fitHeight="56.0" fitWidth="65.0" layoutX="116.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true" />
-                  <Button layoutX="52.0" layoutY="70.0" mnemonicParsing="false" onAction="#onSolveTheSelectedQuestButtonAction" prefHeight="38.0" prefWidth="282.0" styleClass="button2" stylesheets="@../../../styles/styles.css" text="Solve the selected quest" />
+                  <Button fx:id="solveTheSelectedQuestButton" layoutX="52.0" layoutY="70.0" mnemonicParsing="false" onAction="#onSolveTheSelectedQuestButtonAction" prefHeight="38.0" prefWidth="282.0" styleClass="button2" stylesheets="@../../../styles/styles.css" text="Solve the selected quest" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="461.0" layoutY="523.0" prefHeight="150.0" prefWidth="380.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
@@ -392,6 +60,367 @@
                   </Label>
                   <ImageView fitHeight="56.0" fitWidth="65.0" layoutX="116.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true" />
                   <Button fx:id="createAQuestButton" layoutX="49.0" layoutY="70.0" mnemonicParsing="false" onAction="#onCreateAQuestButtonAction" prefHeight="38.0" prefWidth="282.0" styleClass="button2" stylesheets="@../../../styles/styles.css" text="Create a quest" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="leaderboardAnchorPane" layoutX="284.0" layoutY="8.0" prefHeight="709.0" prefWidth="911.0" style="-fx-opacity: 1;">
+         <children>
+            <AnchorPane layoutX="101.0" layoutY="86.0" prefHeight="534.0" prefWidth="739.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
+               <children>
+                  <TableView fx:id="leaderboardTableView" layoutX="51.0" layoutY="136.0" prefHeight="347.0" prefWidth="638.0">
+                    <columns>
+                      <TableColumn fx:id="usernameColumn" prefWidth="379.0" text="Username" />
+                      <TableColumn fx:id="questsCompletedColumn" prefWidth="258.0" sortType="DESCENDING" text="Quests Completed" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="256.0" layoutY="28.0" text="Leaderboard" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-20.0" prefHeight="723.0" prefWidth="305.0" style="-fx-background-color: #483df0; -fx-background-radius: 20;">
+         <effect>
+            <DropShadow height="0.0" radius="31.707500000000003" width="128.83" />
+         </effect>
+         <children>
+            <ImageView fitHeight="129.0" fitWidth="143.0" layoutX="99.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/fotor_2023-4-7_14_54_42.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <Label layoutX="133.0" layoutY="160.0" text="Hello" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="131.0" layoutY="188.0" text="Label" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="80.0" layoutY="352.0" mnemonicParsing="false" onAction="#onQuestsButtonClick" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: transparent;" text="Quests" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/8.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="80.0" layoutY="422.0" mnemonicParsing="false" onAction="#onBadgesButtonClick" prefHeight="45.0" prefWidth="126.0" style="-fx-background-color: transparent;" text="Badges" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/9.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+            </Button>
+            <Label fx:id="pointsLabel" layoutX="137.0" layoutY="227.0" prefHeight="28.0" prefWidth="53.0" style="-fx-background-color: #3f37ce; -fx-background-radius: 5px;" text="124" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color red="0.1541108340024948" green="0.15171174705028534" blue="0.22368420660495758" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/13.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Button layoutX="80.0" layoutY="492.0" mnemonicParsing="false" onAction="#onLeaderboardButtonClick" prefHeight="45.0" prefWidth="168.0" style="-fx-background-color: transparent;" text="Leaderboard" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/11.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="80.0" layoutY="282.0" mnemonicParsing="false" onAction="#onOverviewButtonClick" prefHeight="45.0" prefWidth="143.0" style="-fx-background-color: transparent;" text="Overview" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/14.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="80.0" layoutY="562.0" mnemonicParsing="false" onAction="#onShopButtonClickAction" prefHeight="45.0" prefWidth="101.0" style="-fx-background-color: transparent;" text="Shop" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/10.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="logoutButton" layoutX="80.0" layoutY="632.0" mnemonicParsing="false" onAction="#onLogoutButtonAction" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: transparent;" text="Logout" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/12.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="badgesAnchorPane" layoutX="284.0" prefHeight="715.0" prefWidth="916.0" style="-fx-opacity: 1;">
+         <children>
+            <Label layoutX="391.0" layoutY="38.0" text="Badges" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="36.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="firstBadge" layoutX="80.0" layoutY="170.0" prefHeight="200.0" prefWidth="156.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
+               <children>
+                  <ImageView fitHeight="129.0" fitWidth="134.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/badge1.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="28.0" layoutY="142.0" text="First Quest &#10;Solved" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="secondBadge" layoutX="280.0" layoutY="170.0" prefHeight="200.0" prefWidth="156.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
+               <children>
+                  <ImageView fitHeight="129.0" fitWidth="134.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/badge2.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="28.0" layoutY="142.0" text="10 Quests &#10;Solved" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="fourthBadge" layoutX="680.0" layoutY="170.0" prefHeight="200.0" prefWidth="156.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
+               <children>
+                  <ImageView fitHeight="129.0" fitWidth="134.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/badge4.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="28.0" layoutY="142.0" text="100 Quests &#10;Solved" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="thirdBadge" layoutX="480.0" layoutY="170.0" prefHeight="200.0" prefWidth="156.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
+               <children>
+                  <ImageView fitHeight="129.0" fitWidth="134.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/badge3.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="32.0" layoutY="136.0" text="50 Quests &#10;Solved" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="fifthBadge" layoutX="80.0" layoutY="448.0" prefHeight="200.0" prefWidth="156.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
+               <children>
+                  <ImageView fitHeight="129.0" fitWidth="134.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/badge5.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="28.0" layoutY="142.0" text="First Item &#10;Bought" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="sixthBadge" layoutX="280.0" layoutY="448.0" prefHeight="200.0" prefWidth="156.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
+               <children>
+                  <ImageView fitHeight="129.0" fitWidth="134.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/badge6.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="28.0" layoutY="142.0" text="10 Items &#10;Bought" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="eighthBadge" layoutX="480.0" layoutY="448.0" prefHeight="200.0" prefWidth="156.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
+               <children>
+                  <ImageView fitHeight="129.0" fitWidth="134.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/badge7.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="32.0" layoutY="136.0" text="50 Items &#10;Bought" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="seventhBadge" layoutX="680.0" layoutY="448.0" prefHeight="200.0" prefWidth="156.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
+               <children>
+                  <ImageView fitHeight="129.0" fitWidth="134.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/badge8.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="28.0" layoutY="142.0" text="100 Items &#10;Bought" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="overviewAnchorPane" layoutX="292.0" layoutY="9.0" prefHeight="714.0" prefWidth="908.0" style="-fx-opacity: 1;">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="448.0" prefHeight="215.0" prefWidth="263.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <children>
+                  <Label layoutX="48.0" layoutY="8.0" text="Quests Solved" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="solvedQuestsLabel" layoutX="82.0" layoutY="89.0" text="5" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="48.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="56.0" fitWidth="65.0" layoutX="111.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/8.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="297.0" layoutY="448.0" prefHeight="215.0" prefWidth="263.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <children>
+                  <ListView fx:id="userItemsListView" layoutX="11.0" layoutY="51.0" prefHeight="150.0" prefWidth="241.0" />
+                  <Label layoutX="69.0" layoutY="8.0" text="Your Items" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="583.0" layoutY="29.0" prefHeight="638.0" prefWidth="319.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
+               <children>
+                  <ListView fx:id="responsesListView" layoutX="13.0" layoutY="61.0" prefHeight="478.0" prefWidth="293.0" stylesheets="@../../../styles/styles.css">
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </ListView>
+                  <Button fx:id="markAsBestResponseButton" layoutX="18.0" layoutY="575.0" mnemonicParsing="false" onAction="#onMarkAsBestResponseButtonAction" prefHeight="38.0" prefWidth="293.0" styleClass="button2" stylesheets="@../../../styles/styles.css" text="Mark as the best response" />
+                  <Label layoutX="100.0" layoutY="7.0" text="Responses" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="13.0" layoutY="28.0" prefHeight="399.0" prefWidth="547.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
+               <children>
+                  <TableView fx:id="userQuestsTableView" layoutX="19.0" layoutY="54.0" prefHeight="255.0" prefWidth="509.0" stylesheets="@../../../styles/styles.css">
+                    <columns>
+                      <TableColumn fx:id="questTitleColumn" prefWidth="327.0" text="Quest Title" />
+                      <TableColumn fx:id="pointsColumn" prefWidth="181.0" text="Points" />
+                    </columns>
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </TableView>
+                  <Button layoutX="19.0" layoutY="332.0" mnemonicParsing="false" onAction="#onShowAnswersButtonAction" prefHeight="38.0" prefWidth="509.0" styleClass="button2" stylesheets="@../../../styles/styles.css" text="Show answers">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </Button>
+                  <Label layoutX="202.0" layoutY="7.0" text="Your Quests" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="shopAnchorPane" layoutX="294.0" layoutY="8.0" prefHeight="706.0" prefWidth="900.0" style="-fx-opacity: 1;">
+         <children>
+            <Label layoutX="405.0" layoutY="32.0" text="Shop" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="36.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="51.0" layoutY="115.0" prefHeight="554.0" prefWidth="798.0" styleClass="anchor-pane" stylesheets="@../../../styles/styles.css">
+               <children>
+                  <TableView fx:id="shopTableView" layoutX="49.0" layoutY="48.0" prefHeight="370.0" prefWidth="700.0" stylesheets="@../../../styles/styles.css">
+                    <columns>
+                      <TableColumn fx:id="itemNameTableColumn" prefWidth="524.5" text="Item" />
+                      <TableColumn fx:id="itemPriceTableColumn" prefWidth="173.166748046875" text="Price" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="buyItemButton" layoutX="49.0" layoutY="485.0" mnemonicParsing="false" onAction="#onBuyItemButtonClickAction" prefHeight="42.0" prefWidth="700.0" styleClass="button2" stylesheets="@../../../styles/styles.css" text="Buy the selected item" />
+                  <Label fx:id="errorShopLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="90.0" layoutY="442.0" prefHeight="17.0" prefWidth="619.0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
          </children>
