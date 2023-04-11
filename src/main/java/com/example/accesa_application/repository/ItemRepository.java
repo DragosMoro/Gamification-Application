@@ -23,7 +23,7 @@ public class ItemRepository implements IItemRepository<Integer>{
         try (PreparedStatement preStmt = con.prepareStatement("insert into Items(name, price) values (?,?)")) {
             preStmt.setString(1, elem.getName());
             preStmt.setInt(2, elem.getPrice());
-            int result = preStmt.executeUpdate();
+            preStmt.executeUpdate();
         } catch (Exception e) {
             System.out.println("Error DB " + e);
         }
@@ -37,7 +37,7 @@ public class ItemRepository implements IItemRepository<Integer>{
             preStmt.setString(1, elem.getName());
             preStmt.setInt(2, elem.getPrice());
             preStmt.setInt(3, id);
-            int result = preStmt.executeUpdate();
+            preStmt.executeUpdate();
         } catch (Exception e) {
             System.out.println("Error DB " + e);
         }
@@ -49,7 +49,7 @@ public class ItemRepository implements IItemRepository<Integer>{
         Connection con = dbUtils.getConnection();
         try (PreparedStatement preStmt = con.prepareStatement("delete from Items where id_item = ?")) {
             preStmt.setInt(1, id);
-            int result = preStmt.executeUpdate();
+            preStmt.executeUpdate();
         } catch (Exception e) {
             System.out.println("Error DB " + e);
         }

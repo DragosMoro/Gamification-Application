@@ -4,7 +4,6 @@ import com.example.accesa_application.MainGUI;
 import com.example.accesa_application.domain.Quest;
 import com.example.accesa_application.domain.User;
 import com.example.accesa_application.service.Service;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -31,12 +30,14 @@ public class CreateQuestController {
    private Service service;
     private User<Integer> user;
 
+
     public void initialize(Service service, User<Integer> user) {
         this.service = service;
         this.user = user;
     }
+
     @FXML
-    public void onAddQuestButtonAction(ActionEvent event) {
+    public void onAddQuestButtonAction() {
         String title = titleTextField.getText();
         String description = descriptionTextArea.getText();
         String rewardInPoints = rewardInPointsTextField.getText();

@@ -24,7 +24,7 @@ public class ResponseRepository implements IResponseRepository<Integer>{
             preStmt.setInt(2, elem.getIdQuest());
             preStmt.setString(3, elem.getMessage());
             preStmt.setString(4, elem.getStatus());
-            int result = preStmt.executeUpdate();
+            preStmt.executeUpdate();
         } catch (Exception e) {
             System.out.println("Error DB " + e);
         }
@@ -39,7 +39,7 @@ public class ResponseRepository implements IResponseRepository<Integer>{
             preparedStatement.setString(3, elem.getMessage());
             preparedStatement.setString(4, elem.getStatus());
             preparedStatement.setInt(5, id);
-            int result = preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
         } catch (Exception e) {
             System.out.println("Error DB " + e);
         }
@@ -50,7 +50,7 @@ public class ResponseRepository implements IResponseRepository<Integer>{
         Connection connection = dbUtils.getConnection();
         try (PreparedStatement preparedStatement = connection.prepareStatement("delete from Responses where id_response = ?")) {
             preparedStatement.setInt(1, id);
-            int result = preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
         } catch (Exception e) {
             System.out.println("Error DB " + e);
         }

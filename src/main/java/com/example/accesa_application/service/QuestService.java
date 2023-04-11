@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Properties;
 
 public class QuestService implements IQuestService<Integer>{
-    static Properties props = new Properties();
+    Properties props ;
     private final IQuestRepository<Integer> questRepository;
 
     public QuestService(Properties props,IQuestRepository<Integer> questRepository) {

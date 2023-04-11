@@ -6,7 +6,6 @@ import com.example.accesa_application.domain.Response;
 import com.example.accesa_application.domain.User;
 import com.example.accesa_application.service.ResponseService;
 import com.example.accesa_application.service.Service;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -48,7 +47,7 @@ public class SolveQuestController {
         pointsLabel.setText(String.valueOf(selectedQuest.getPoints()));
     }
     @FXML
-    void onAddAnswerButtonAction(ActionEvent event) {
+    void onAddAnswerButtonAction() {
         String answer = answerTextArea.getText();
 
         if (answer.equals("")) {

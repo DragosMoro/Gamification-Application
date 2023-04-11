@@ -11,7 +11,7 @@
 }
 
 .button {
-    -fx-background-color: #483df0; /* Culoare violet modernă */
+    -fx-background-color: #483df0;
     -fx-background-radius: 15;
     -fx-border-color: transparent;
     -fx-border-radius: 15;
@@ -20,7 +20,7 @@
 
 .button:hover {
     -fx-background-color: white;
-    -fx-text-fill: #483df0; /* Culoare violet modernă */
+    -fx-text-fill: #483df0;
 }
 
 .button:focused{
@@ -114,12 +114,12 @@
 }
 .button2:hover {
     -fx-background-color: white;
-    -fx-text-fill:  #1b1a1a; /* Culoare violet modernă */
+    -fx-text-fill:  #1b1a1a;
 }
 
 .button2:focused{
     -fx-background-color: white;
-    -fx-text-fill:  #1b1a1a; /* Culoare violet modernă */
+    -fx-text-fill:  #1b1a1a;
 }
 
 
@@ -131,9 +131,6 @@
 .tab-pane {
     -fx-background-color: transparent;
 }
-
-
-
 
 .tab-pane .tab-header-background {
     -fx-background-color: transparent;
@@ -196,6 +193,30 @@
 
 .scroll-bar:horizontal .thumb {
     -fx-min-height: 10;
+}
+
+
+.button3{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF;
+
+}
+.button3:hover{
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF;
+    -fx-translate-x: 3;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.5) , 10, 0.0 , 0 , 1 );
+}
+.button3:pressed{
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF;
+    -fx-translate-x: 0;
+}
+.button3:focused{
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF;
+    -fx-translate-x: 0;
 }
 
 

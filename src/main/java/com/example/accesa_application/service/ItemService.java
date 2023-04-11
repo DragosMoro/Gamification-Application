@@ -6,7 +6,7 @@ import com.example.accesa_application.repository.IItemRepository;
 import java.util.Properties;
 
 public class ItemService implements IItemService<Integer>{
-    static Properties props = new Properties();
+    Properties props ;
     private final IItemRepository<Integer> itemRepository;
 
     public ItemService(Properties props,IItemRepository<Integer> itemRepository) {

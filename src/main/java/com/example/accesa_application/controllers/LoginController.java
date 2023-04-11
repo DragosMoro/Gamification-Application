@@ -10,9 +10,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class LoginController {
     @FXML
@@ -48,6 +50,7 @@ public class LoginController {
     public Label errorLabel;
     private Service service;
     private UserService userService;
+
     public void setService(Service service) {
         this.userService = (UserService) service.getUserService();
         this.service = service;
@@ -69,18 +72,31 @@ public class LoginController {
     }
     @FXML
     public void onRegisterButtonClick() {
+        errorRegisterLabel.setTextFill(javafx.scene.paint.Color.RED);
         String username = usernameRegisterTextField.getText();
         String email = emailRegisterTextField.getText();
         String password = passwordRegisterTextField.getText();
         String repeatPassword = repeatPasswordRegisterTextField.getText();
+        String emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,}$";
+
+
         if (email.equals("") || password.equals("") || repeatPassword.equals("") || username.equals("")) {
             errorRegisterLabel.setText("Please complete all fields");
+            return;
+        }
+        Pattern pattern = Pattern.compile(emailRegex);
+        Matcher matcher = pattern.matcher(email);
+
+        boolean match = matcher.matches();
+        if(!match){
+            errorRegisterLabel.setText("Email is invalid");
             return;
         }
         if (!password.equals(repeatPassword)) {
             errorRegisterLabel.setText("Passwords do not match");
             return;
         }
+
         if (userService.getUserByEmail(email) != null) {
             errorRegisterLabel.setText("Email already exists");
             return;
@@ -93,10 +109,12 @@ public class LoginController {
         userService.add(user);
         errorRegisterLabel.setTextFill(javafx.scene.paint.Color.GREEN);
         errorRegisterLabel.setText("User registered successfully");
+
     }
     @FXML
     public void onLoginButtonClick()
     {
+        errorRegisterLabel.setTextFill(javafx.scene.paint.Color.RED);
         String email = emailLoginTextField.getText();
         String password = passwordLoginTextField.getText();
         if (email.equals("") || password.equals("")) {

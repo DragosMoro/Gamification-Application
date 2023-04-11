@@ -6,7 +6,6 @@ import com.example.accesa_application.service.*;
 import com.example.accesa_application.utils.WrappingListCellFactory;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -16,8 +15,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
 
 public class MainMenuController {
 
@@ -195,7 +192,7 @@ public class MainMenuController {
         ArrayList<Response<Integer>>responsesForSpecificQuest = responseService.filterResponsesByQuest(selectedQuest.getId());
 
         for(Response<Integer> response : responsesForSpecificQuest) {
-           String responseInfo = String.format("%s answered:\n %s",userService.findAfterId(response.getIdUser()).getUsername(),   response.getMessage(), response.getStatus());
+           String responseInfo = String.format("%s answered:\n %s",userService.findAfterId(response.getIdUser()).getUsername(),   response.getMessage());
               responsesModel.add(responseInfo);
         }
         responsesListView.setItems(responsesModel);
@@ -220,35 +217,35 @@ public class MainMenuController {
         userItemsListView.setItems(userItemsModel);
     }
     @FXML
-    public void onBadgesButtonClick(ActionEvent event) {
+    public void onBadgesButtonClick() {
         badgesPageView();
     }
 
     @FXML
-    public void onLeaderboardButtonClick(ActionEvent event) {
+    public void onLeaderboardButtonClick() {
         leaderboardPageView();
     }
 
     @FXML
-    public void onOverviewButtonClick(ActionEvent event) {
+    public void onOverviewButtonClick() {
         overviewPageView();
     }
 
     @FXML
-    public void onQuestsButtonClick(ActionEvent event) {
+    public void onQuestsButtonClick() {
         questsPageView();
     }
 
     @FXML
-    public void onShopButtonClickAction(ActionEvent event) {
+    public void onShopButtonClickAction() {
         shopPageView();
     }
     @FXML
-    public void onShowAnswersButtonAction(ActionEvent event) {
+    public void onShowAnswersButtonAction() {
         populateResponsesListView() ;
     }
     @FXML
-    public void onMarkAsBestResponseButtonAction(ActionEvent event) {
+    public void onMarkAsBestResponseButtonAction() {
         Quest<Integer> selectedQuest = populateResponsesListView();
         if (selectedQuest == null) {
             return;
@@ -277,7 +274,7 @@ public class MainMenuController {
         availableQuestsTableView.setItems(availableQuestsModel);
     }
     @FXML
-    public void onSolveTheSelectedQuestButtonAction(ActionEvent event) {
+    public void onSolveTheSelectedQuestButtonAction() {
         Quest<Integer> selectedQuest = availableQuestsTableView.getSelectionModel().getSelectedItem();
         if (selectedQuest == null) {
             return;
@@ -303,7 +300,7 @@ public class MainMenuController {
     }
 
     @FXML
-    public void onCreateAQuestButtonAction(ActionEvent event) {
+    public void onCreateAQuestButtonAction() {
 
         Scene scene ;
         FXMLLoader loader = new FXMLLoader(MainGUI.class.getResource("create_quest.fxml"));
@@ -327,12 +324,11 @@ public class MainMenuController {
     private void populateLeaderboard(){
         UserService userService = (UserService) service.getUserService();
         ArrayList<User<Integer>> users = (ArrayList<User<Integer>>) userService.getAll();
+        users.sort((o1, o2) -> o2.getNumberOfQuestsCompleted() - o1.getNumberOfQuestsCompleted());
        leaderboardModel.setAll(users);
        usernameColumn.setCellValueFactory(new PropertyValueFactory<>("username"));
        questsCompletedColumn.setCellValueFactory(new PropertyValueFactory<>("numberOfQuestsCompleted"));
        leaderboardTableView.setItems(leaderboardModel);
-
-
     }
     private void populateShopTableView(){
         ItemService itemService = (ItemService) service.getItemService();
@@ -342,22 +338,6 @@ public class MainMenuController {
         itemPriceTableColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
         shopTableView.setItems(shopModel);
     }
-    private void badgeInformation(){
-        Scene scene ;
-        FXMLLoader loader = new FXMLLoader(MainGUI.class.getResource("information_badge.fxml"));
-        try {
-            scene = new Scene(loader.load(), 600, 400);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return;
-        }
-        Stage newStage = new Stage();
-        newStage.setScene(scene);
-        newStage.setResizable(false);
-        newStage.setTitle("Badge information");
-        newStage.show();
-    }
-
     @FXML
     public void onLogoutButtonAction(){
 

@@ -25,7 +25,7 @@ public class UserRepository implements IUserRepository<Integer>{
             preStmt.setString(3, elem.getPassword());
             preStmt.setInt(4, elem.getNumberOfQuestsCompleted());
             preStmt.setInt(5, elem.getPoints());
-            int result = preStmt.executeUpdate();
+            preStmt.executeUpdate();
         } catch (Exception e) {
             System.out.println("Error DB " + e);
         }
@@ -40,8 +40,8 @@ public class UserRepository implements IUserRepository<Integer>{
             preparedStatement.setString(3, elem.getPassword());
             preparedStatement.setInt(4, elem.getNumberOfQuestsCompleted());
             preparedStatement.setInt(5, elem.getPoints());
-            preparedStatement.setInt(6, (int) id);
-            int result = preparedStatement.executeUpdate();
+            preparedStatement.setInt(6, id);
+            preparedStatement.executeUpdate();
         } catch (Exception e) {
             System.out.println("Error DB " + e);
         }
@@ -51,7 +51,7 @@ public class UserRepository implements IUserRepository<Integer>{
     Connection connection = dbUtils.getConnection();
         try (PreparedStatement preparedStatement = connection.prepareStatement("delete from Users where id_user = ?")) {
             preparedStatement.setInt(1, id);
-            int result = preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
         } catch (Exception e) {
             System.out.println("Error DB " + e);
         }
@@ -61,7 +61,7 @@ public class UserRepository implements IUserRepository<Integer>{
     public User<Integer> findAfterId(Integer id) {
         Connection connection = dbUtils.getConnection();
         try (PreparedStatement preparedStatement = connection.prepareStatement("select * from Users where id_user = ?")) {
-            preparedStatement.setInt(1, (int) id);
+            preparedStatement.setInt(1, id);
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 if (resultSet.next()) {
                     String username = resultSet.getString("username");
@@ -74,7 +74,7 @@ public class UserRepository implements IUserRepository<Integer>{
                     return user;
                 }
             }
-            int result = preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
         } catch (Exception e) {
             System.out.println("Error DB " + e);
         }
@@ -99,7 +99,7 @@ public class UserRepository implements IUserRepository<Integer>{
                     users.add(user);
                 }
             }
-            int result = preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
         } catch (Exception e) {
             System.out.println("Error DB " + e);
         }
@@ -123,7 +123,7 @@ public class UserRepository implements IUserRepository<Integer>{
                     return user;
                 }
             }
-            int result = preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
         } catch (Exception e) {
             System.out.println("Error DB " + e);
         }
@@ -147,7 +147,7 @@ public class UserRepository implements IUserRepository<Integer>{
                     return user;
                 }
             }
-            int result = preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
         } catch (Exception e) {
             System.out.println("Error DB " + e);
         }

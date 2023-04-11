@@ -25,7 +25,7 @@ public class QuestRepository implements IQuestRepository<Integer>{
             preStmt.setString(3, elem.getDescription());
             preStmt.setInt(4, elem.getPoints());
             preStmt.setBoolean(5, elem.isCompleted());
-            int result = preStmt.executeUpdate();
+            preStmt.executeUpdate();
         } catch (Exception e) {
             System.out.println("Error DB " + e);
         }
@@ -42,7 +42,7 @@ public class QuestRepository implements IQuestRepository<Integer>{
             preparedStatement.setInt(4, elem.getPoints());
             preparedStatement.setBoolean(5, elem.isCompleted());
             preparedStatement.setInt(6, id);
-            int result = preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
         } catch (Exception e) {
             System.out.println("Error DB " + e);
         }
@@ -53,7 +53,7 @@ public class QuestRepository implements IQuestRepository<Integer>{
     Connection connection = dbUtils.getConnection();
         try (PreparedStatement preparedStatement = connection.prepareStatement("delete from Quests where id_quest = ?")) {
             preparedStatement.setInt(1, id);
-            int result = preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
         } catch (Exception e) {
             System.out.println("Error DB " + e);
         }
@@ -65,7 +65,7 @@ public class QuestRepository implements IQuestRepository<Integer>{
         Connection connection = dbUtils.getConnection();
 
         try (PreparedStatement preparedStatement = connection.prepareStatement("select * from Quests where id_quest = ?")) {
-            preparedStatement.setInt(1, (int) id);
+            preparedStatement.setInt(1, id);
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 if (resultSet.next()) {
                     int idUser = resultSet.getInt("id_user");

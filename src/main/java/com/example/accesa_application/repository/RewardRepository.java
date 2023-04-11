@@ -22,7 +22,7 @@ public class RewardRepository  implements IRewardRepository<Integer>{
         try (PreparedStatement preStmt = con.prepareStatement("insert into Rewards(id_user,id_item) values (?,?)")) {
             preStmt.setInt(1, elem.getIdUser());
             preStmt.setInt(2, elem.getIdItem());
-            int result = preStmt.executeUpdate();
+            preStmt.executeUpdate();
         } catch (Exception e) {
             System.out.println("Error DB " + e);
         }
@@ -36,7 +36,7 @@ public class RewardRepository  implements IRewardRepository<Integer>{
             preparedStatement.setInt(1, elem.getIdUser());
             preparedStatement.setInt(2, elem.getIdItem());
             preparedStatement.setInt(3, integer);
-            int result = preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
         } catch (Exception e) {
             System.out.println("Error DB " + e);
         }
@@ -48,7 +48,7 @@ public class RewardRepository  implements IRewardRepository<Integer>{
         Connection connection = dbUtils.getConnection();
         try (PreparedStatement preparedStatement = connection.prepareStatement("delete from Rewards where id_reward = ?")) {
             preparedStatement.setInt(1, integer);
-            int result = preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
         } catch (Exception e) {
             System.out.println("Error DB " + e);
         }

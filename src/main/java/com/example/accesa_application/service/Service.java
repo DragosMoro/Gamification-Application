@@ -1,7 +1,5 @@
 package com.example.accesa_application.service;
 
-import com.example.accesa_application.repository.IRewardRepository;
-
 import java.util.Properties;
 
 public class Service {

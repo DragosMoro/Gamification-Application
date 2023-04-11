@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class JdbcUtils {
 
-    private Properties jdbcProps;
+    private final Properties jdbcProps;
 
 
     public JdbcUtils(Properties props){

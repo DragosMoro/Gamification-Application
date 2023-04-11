@@ -8,7 +8,7 @@ import java.util.Properties;
 
 public class ResponseService implements IResponseService<Integer>{
 
-        static Properties props = new Properties();
+        Properties props;
         private final IResponseRepository<Integer> responseRepository;
 
         public ResponseService(Properties props, IResponseRepository<Integer> responseRepository) {

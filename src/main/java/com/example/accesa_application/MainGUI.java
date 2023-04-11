@@ -6,7 +6,6 @@ import com.example.accesa_application.service.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.FileReader;
@@ -38,8 +37,6 @@ public class MainGUI extends Application {
         LoginController loginController = fxmlLoader.getController();
         loginController.setService(service);
         loginController.initialize();
-        //Image icon = new Image("https://blog.hootsuite.com/wp-content/uploads/2021/07/free-stock-photos-03-scaled.png");
-        //stage.getIcons().add(icon);
         stage.setTitle("Login");
         stage.setScene(scene);
         stage.setResizable(false);

@@ -1,14 +1,13 @@
 package com.example.accesa_application.service;
 
 import com.example.accesa_application.domain.Reward;
-import com.example.accesa_application.repository.IResponseRepository;
 import com.example.accesa_application.repository.IRewardRepository;
 
 import java.util.ArrayList;
 import java.util.Properties;
 
 public class RewardService implements IRewardService<Integer>{
-    static Properties props = new Properties();
+    Properties props;
     private final IRewardRepository<Integer> rewardRepository;
 
     public RewardService(Properties props, IRewardRepository<Integer> rewardRepository) {

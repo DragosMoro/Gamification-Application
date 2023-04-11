@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class UserService implements IUserService<Integer>{
 
-    Properties props = new Properties();
+    Properties props;
     private final IUserRepository<Integer> userRepository;
 
     public UserService(Properties props, IUserRepository<Integer> userRepository) {
