@@ -18,13 +18,28 @@
 </ul>
 <h2>Screenshots</h2>
 <h3>Login Screen</h3>
-<img width='300px' src="/screenshots/login_screen.png" alt="Login Screen">
+<img width='600px' src="https://github.com/DragosMoro/Gamification-Application/blob/master/src/main/resources/images/screenshots/Screenshot%202023-04-11%20203756.png" alt="Login Screen">
 <h3>Registration Screen</h3>
-<img width='300px' src="/screenshots/registration_screen.png" alt="Registration Screen">
-<h3>Main Screen</h3>
-<img width='500px' src="/screenshots/main_screen.png" alt="Main Screen">
+<img width='600px' src="https://github.com/DragosMoro/Gamification-Application/blob/master/src/main/resources/images/screenshots/Screenshot%202023-04-11%20203808.png" alt="Registration Screen">
+<h3>Overview Screen</h3>
+<img width='600px' src="https://github.com/DragosMoro/Gamification-Application/blob/master/src/main/resources/images/screenshots/Screenshot%202023-04-11%20203907.png" alt="Overview Screen">
 <h3>Quests Screen</h3>
-<img width='500px' src="/screenshots/quests_screen.png" alt="Quests Screen">
+<img width='600px' src="https://github.com/DragosMoro/Gamification-Application/blob/master/src/main/resources/images/screenshots/Screenshot%202023-04-11%20203925.png" alt="Quests Screen">
+<h3>Solve Quest Screen</h3>
+<img width='600px' src="https://github.com/DragosMoro/Gamification-Application/blob/master/src/main/resources/images/screenshots/Screenshot%202023-04-11%20203945.png" alt="Solve Quest Screen">
+<h3>Add Quest Screen</h3>
+<img width='600px' src="https://github.com/DragosMoro/Gamification-Application/blob/master/src/main/resources/images/screenshots/Screenshot%202023-04-11%20204015.png" alt="Add Quest Screen">
+<h3>Badges Screen</h3>
+<img width='600px' src="https://github.com/DragosMoro/Gamification-Application/blob/master/src/main/resources/images/screenshots/Screenshot%202023-04-11%20204033.png" alt="Badges Screen">
+<h3>Leaderboard Screen</h3>
+<img width='600px' src="https://github.com/DragosMoro/Gamification-Application/blob/master/src/main/resources/images/screenshots/Screenshot%202023-04-11%20204045.png" alt="Leaderboard Screen">
+<h3>Shop Screen</h3>
+<img width='600px' src="https://github.com/DragosMoro/Gamification-Application/blob/master/src/main/resources/images/screenshots/Screenshot%202023-04-11%20204106.png" alt="Shop Screen">
+<h3>Classes Diagram</h3>
+<img width='900px' src="https://github.com/DragosMoro/Gamification-Application/blob/master/src/main/resources/images/screenshots/Screenshot%202023-04-11%20201519.png" alt="Classes Diagram">
+<h3>Database Diagram</h3>
+<img width='600px' src="https://github.com/DragosMoro/Gamification-Application/blob/master/src/main/resources/images/screenshots/Screenshot%202023-04-11%20201033.png" alt="Database Diagram">
+
 <h2>Technologies and Patterns Used</h2>
 <p>The following are the technologies and patterns used in the app:</p>
 <ul>
